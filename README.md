@@ -6,6 +6,7 @@
 Please install:<br/>
 python >= 3.6 version<br/>
 python lib: scipy.stats <br/>
+python lib: adaFDR <br/>
 
 ASTER - Manual
 ------------------
