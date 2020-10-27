@@ -26,6 +26,8 @@ g – RNA-Seq gene expression (rsem count) (TCGA) <br/>
 n – GTEX gene expression (rsem count) (normal) <br/>
 c - p-value cutoff, i.e. 0.05 <br/>
 
+To run ASTER++:
+Do run adaFDR ontop of ASTER results with covariate features: https://pypi.org/project/adafdr/
 
 <br />
 Please contact the author of this program Herty Liany, email: e0146315@u.nus.edu if you encountered any problems. <br /> Thank you.
