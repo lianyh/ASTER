@@ -1,4 +1,4 @@
-ASTER generates 11 columns as output:
+ASTER generates 11 columns results:
 Column 5th refer to the state of second column gene, either amplification or deletion
 Column 6th refer to the state of fourth column gene, either amplification or deletion
 Column 7th, 8th, and 9th refer to 1st pvalue, 2nd pvalue and 3rd pvalue test results.
