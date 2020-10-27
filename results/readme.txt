@@ -1,4 +1,4 @@
-The ASTER results has 11 columns. 
+The output produced by ASTER program as follow: 
 Column 5th refer to the state of second column gene, either amplification or deletion
 Column 6th refer to the state of fourth column gene, either amplification or deletion
 Column 7th, 8th, and 9th refer to 1st pvalue, 2nd pvalue and 3rd pvalue test results.
