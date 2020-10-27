@@ -23,7 +23,7 @@ i – A list of gene pairs with HUGO Gene Name and entrez ID <br/>
 s – Normalized SCNA data in a range of -2 to 2 (TCGA samples)<br/>
 g – RNA-Seq gene expression (rsem count) (TCGA) <br/>
 n – GTEX gene expression (rsem count) (normal) <br/>
-c - p-value cutoff, i.e. 0.05 <br/>
+c – p-value cutoff, i.e. 0.05 <br/>
 
 To run ASTER++:
 Do run adaFDR ontop of ASTER results with covariates: https://pypi.org/project/adafdr/
