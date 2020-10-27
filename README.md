@@ -1,4 +1,4 @@
-# ASTER (Analysis ofSynthetic lethality by compar-ison withTissue-specific disease-free gEnomic and tRanscriptomic data): a Method to Predict Clinically ActionableSynthetic Lethal Interactions
+# ASTER: A Method to Predict Clinically ActionableSynthetic Lethal Interactions
 
 --------------------------------
 *Prerequisite*
