@@ -19,7 +19,7 @@ Command
 bash source/run.ASTER.sh -i data/genes_ID.txt -s data/data_CNA_TCGA.txt -g data/gene_expression_counts_TCGA.txt -n data/gene_expression_counts_GTEX.txt -c 0.05 
 
 Input parameters:<br/>
-i – Gene list pairs with HUGO Gene Name and entrez ID <br/>
+i – A list of gene pairs with HUGO Gene Name and entrez ID <br/>
 s – Normalized SCNA data in a range of -2 to 2 (TCGA samples)<br/>
 g – RNA-Seq gene expression (rsem count) (TCGA) <br/>
 n – GTEX gene expression (rsem count) (normal) <br/>
