@@ -50,7 +50,8 @@ fi
 echo "Running..."
 python3 ASTER.py ${i} ${s} ${g} ${n} > temp_results
 
-awk '$7<$c && $8<$c && $9<$c && $7!=""' temp_results > my_results
+
+awk '$7 < '$c' && $8 < '$c' && $9 < '$c' && $7!=""' temp_results > my_results
 rm temp_results
 echo "Done"
 
