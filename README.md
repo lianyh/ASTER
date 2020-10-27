@@ -1,4 +1,4 @@
-# ASTER: A Method to Predict Clinically ActionableSynthetic Lethal Interactions
+# ASTER: A Method to Predict Clinically Actionable Synthetic Lethal Interactions
 
 --------------------------------
 *Prerequisite*
