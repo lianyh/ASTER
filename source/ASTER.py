@@ -49,10 +49,10 @@ def getGeneA_Del_GeneB_Amp(geneA, geneB, CNADict,geneExprDictTCGA, gTEXGeneExprD
 			listOfexprLowSample.append(smpl)
 
 	for s2, exprVal in gTEXGeneExprDict[geneA].items():
-			listOfexprGTEX_A.append(float(list(exprVal)[0]))
+		listOfexprGTEX_A.append(float(list(exprVal)[0]))
 
 	for s2, exprVal in gTEXGeneExprDict[geneB].items():
-			listOfexprGTEX_B.append(float(list(exprVal)[0]))
+		listOfexprGTEX_B.append(float(list(exprVal)[0]))
 
 	resultA_Del=ss.ranksums(listOfexprLow,listOfexprGTEX_A)
 	pValGeneA_Del = resultA_Del.pvalue
@@ -100,10 +100,10 @@ def getGeneA_Amp_GeneB_Del(geneA, geneB, CNADict,geneExprDictTCGA, gTEXGeneExprD
 			listOfexprLowSample.append(smpl)
 
 	for s2, exprVal in gTEXGeneExprDict[geneA].items():
-			listOfexprGTEX_A.append(float(list(exprVal)[0]))
+		listOfexprGTEX_A.append(float(list(exprVal)[0]))
 
 	for s2, exprVal in gTEXGeneExprDict[geneB].items():
-			listOfexprGTEX_B.append(float(list(exprVal)[0]))
+		listOfexprGTEX_B.append(float(list(exprVal)[0]))
 
 	resultA_Amp=ss.ranksums(listOfexprHigh,listOfexprGTEX_A)
 	pValGeneA_Amp = resultA_Amp.pvalue
@@ -137,7 +137,7 @@ def getGeneB_Del(gene,CNASampleList, CNADict,geneExprDictTCGA, gTEXGeneExprDict)
 			listOfexprHigh.append(float(list(allExprValue)[0]))
 
 	for s2, exprVal in gTEXGeneExprDict[gene].items():
-			listOfexprGTEX.append(float(list(exprVal)[0]))
+		listOfexprGTEX.append(float(list(exprVal)[0]))
 	
 	resultB_Del=ss.ranksums(listOfexprLow,listOfexprGTEX)
 	pvalGeneB_Del = resultB_Del.pvalue
@@ -164,7 +164,7 @@ def getGeneB_Amp(gene,CNASampleList, CNADict,geneExprDictTCGA,gTEXGeneExprDict):
 			listOfexprLow.append(float(list(allExprValue)[0]))
 
 	for s2, exprVal in gTEXGeneExprDict[gene].items():
-			listOfexprGTEX.append(float(list(exprVal)[0]))
+		listOfexprGTEX.append(float(list(exprVal)[0]))
 	
 	resultB_Amp=ss.ranksums(listOfexprHigh,listOfexprGTEX)
 	pvalGeneB_Amp = resultB_Amp.pvalue
@@ -200,7 +200,7 @@ def getGene_Amplification_Del(gene, CNADict, geneExprDictTCGA, gTEXGeneExprDict)
 			listOfexprLow.append(float(list(allExprValue)[0]))
 			
 	for s2, exprVal in gTEXGeneExprDict[gene].items():
-			listOfexprGTEX.append(float(list(exprVal)[0]))
+		listOfexprGTEX.append(float(list(exprVal)[0]))
 
 	resultA_Amp=ss.ranksums(listOfexprHigh,listOfexprGTEX)
 	pValGeneA_Amp = resultA_Amp.pvalue
