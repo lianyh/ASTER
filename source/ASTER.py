@@ -54,14 +54,14 @@ def getGeneA_Del_GeneB_Amp(geneA, geneB, CNADict,geneExprDictTCGA, gTEXGeneExprD
 	for s2, exprVal in gTEXGeneExprDict[geneB].items():
 		listOfexprGTEX_B.append(float(list(exprVal)[0]))
 
-	resultA_Del=ss.ranksums(listOfexprLow,listOfexprGTEX_A)
+	resultA_Del=ss.ranksums(listOfexprLow,listOfexprGTEX_A,alternative='less')
 	pValGeneA_Del = resultA_Del.pvalue
 
-	resultB_Amp=ss.ranksums(listOfexprHigh,listOfexprGTEX_B)
+	resultB_Amp=ss.ranksums(listOfexprHigh,listOfexprGTEX_B,alternative='greater')
 	pvalGeneB_Amp = resultB_Amp.pvalue
 	
 	if pValGeneA_Del <= 1 and pvalGeneB_Amp <= 1:
-		tt=ss.ranksums(listOfexprHigh,listOfexprLow)
+		tt=ss.ranksums(listOfexprHigh,listOfexprLow,alternative='greater')
 		return tt.pvalue 
 	
 	return 1
@@ -105,14 +105,14 @@ def getGeneA_Amp_GeneB_Del(geneA, geneB, CNADict,geneExprDictTCGA, gTEXGeneExprD
 	for s2, exprVal in gTEXGeneExprDict[geneB].items():
 		listOfexprGTEX_B.append(float(list(exprVal)[0]))
 
-	resultA_Amp=ss.ranksums(listOfexprHigh,listOfexprGTEX_A)
+	resultA_Amp=ss.ranksums(listOfexprHigh,listOfexprGTEX_A,alternative='greater')
 	pValGeneA_Amp = resultA_Amp.pvalue
 
-	resultB_Del=ss.ranksums(listOfexprLow,listOfexprGTEX_B)
+	resultB_Del=ss.ranksums(listOfexprLow,listOfexprGTEX_B,alternative='less')
 	pvalGeneB_Del = resultB_Del.pvalue
 	
 	if pValGeneA_Amp <= 1  and pvalGeneB_Del <= 1:
-		tt=ss.ranksums(listOfexprHigh,listOfexprLow)
+		tt=ss.ranksums(listOfexprHigh,listOfexprLow,alternative='greater')
 		return tt.pvalue
 	
 	return 1
@@ -139,7 +139,7 @@ def getGeneB_Del(gene,CNASampleList, CNADict,geneExprDictTCGA, gTEXGeneExprDict)
 	for s2, exprVal in gTEXGeneExprDict[gene].items():
 		listOfexprGTEX.append(float(list(exprVal)[0]))
 	
-	resultB_Del=ss.ranksums(listOfexprLow,listOfexprGTEX)
+	resultB_Del=ss.ranksums(listOfexprLow,listOfexprGTEX,alternative='less')
 	pvalGeneB_Del = resultB_Del.pvalue
 
 	return pvalGeneB_Del, len(dCNALow)
@@ -166,7 +166,7 @@ def getGeneB_Amp(gene,CNASampleList, CNADict,geneExprDictTCGA,gTEXGeneExprDict):
 	for s2, exprVal in gTEXGeneExprDict[gene].items():
 		listOfexprGTEX.append(float(list(exprVal)[0]))
 	
-	resultB_Amp=ss.ranksums(listOfexprHigh,listOfexprGTEX)
+	resultB_Amp=ss.ranksums(listOfexprHigh,listOfexprGTEX,alternative='greater')
 	pvalGeneB_Amp = resultB_Amp.pvalue
 
 	return pvalGeneB_Amp,len(dCNAHigh)
@@ -202,10 +202,10 @@ def getGene_Amplification_Del(gene, CNADict, geneExprDictTCGA, gTEXGeneExprDict)
 	for s2, exprVal in gTEXGeneExprDict[gene].items():
 		listOfexprGTEX.append(float(list(exprVal)[0]))
 
-	resultA_Amp=ss.ranksums(listOfexprHigh,listOfexprGTEX)
+	resultA_Amp=ss.ranksums(listOfexprHigh,listOfexprGTEX,alternative='greater')
 	pValGeneA_Amp = resultA_Amp.pvalue
 
-	resultA_Del=ss.ranksums(listOfexprLow,listOfexprGTEX)
+	resultA_Del=ss.ranksums(listOfexprLow,listOfexprGTEX,alternative='less')
 	pvalGeneA_Del = resultA_Del.pvalue
 
 	return pValGeneA_Amp, pvalGeneA_Del, dCNAHigh, dCNALow
